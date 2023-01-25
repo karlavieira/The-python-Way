@@ -1,0 +1,459 @@
+0
+1
+00:00:00,030 --> 00:00:00,863
+To begin,
+1
+
+2
+00:00:00,930 --> 00:00:05,820
+I want you to locate the day 1.2 debugging exercise.
+2
+
+3
+00:00:06,960 --> 00:00:10,380
+And now, as you did before, go ahead and read through the instructions.
+3
+
+4
+00:00:10,740 --> 00:00:15,740
+Be mindful that the output must match the example output precisely.
+4
+
+5
+00:00:16,410 --> 00:00:19,980
+And when you hit run, this is the outcome you're looking for.
+5
+
+6
+00:00:20,430 --> 00:00:22,890
+So there's quite a few things broken here,
+6
+
+7
+00:00:23,130 --> 00:00:28,130
+but I want you to have a go at fixing each line individually and pulling out the
+7
+
+8
+00:00:28,590 --> 00:00:31,860
+bugs from the code. So pause the video now and give that a go.
+8
+
+9
+00:00:36,710 --> 00:00:37,130
+<v 1>All right.</v>
+9
+
+10
+00:00:37,130 --> 00:00:40,610
+<v 0>So how did that go? If you haven't got your computer in front of you,</v>
+10
+
+11
+00:00:40,610 --> 00:00:45,350
+if you're traveling, if somehow you can't access the exercise, just pause
+11
+
+12
+00:00:45,380 --> 00:00:46,790
+and when you've got time,
+12
+
+13
+00:00:46,820 --> 00:00:49,430
+then complete the challenge and then come back to the course.
+13
+
+14
+00:00:49,850 --> 00:00:53,300
+It is so important that you actually do some hands-on stuff.
+14
+
+15
+00:00:53,540 --> 00:00:57,440
+And I stress that this is the only way that you are going to become the rock
+15
+
+16
+00:00:57,440 --> 00:01:02,300
+star coder that I know you can be. Let's take a look at the code below.
+16
+
+17
+00:01:02,870 --> 00:01:06,410
+You can see that when we run our code as it is right now,
+17
+
+18
+00:01:06,590 --> 00:01:08,300
+we get a new error.
+18
+
+19
+00:01:08,780 --> 00:01:12,650
+And this is going to point to the first of many errors in this file.
+19
+
+20
+00:01:13,340 --> 00:01:17,930
+And in this case, it tells us that on line three,
+20
+
+21
+00:01:18,170 --> 00:01:22,970
+so this one right here, at around this position
+21
+
+22
+00:01:22,970 --> 00:01:27,740
+or somewhere around here, um, as denoted by the little caret sign,
+22
+
+23
+00:01:28,130 --> 00:01:31,790
+there is a syntax error. If we study this closely,
+23
+
+24
+00:01:31,790 --> 00:01:36,200
+you can see that the code highlighting seems to be suggesting that all of this
+24
+
+25
+00:01:36,200 --> 00:01:41,060
+is code, but this is somehow text. So what's going on here?
+25
+
+26
+00:01:41,510 --> 00:01:44,900
+Well, notice that we've only got one double quote.
+26
+
+27
+00:01:45,200 --> 00:01:48,770
+So it thinks that what comes after this is the text,
+27
+
+28
+00:01:49,190 --> 00:01:52,850
+but what comes before it, it thought it was just a continuation of code.
+28
+
+29
+00:01:53,330 --> 00:01:54,500
+So to fix this one,
+29
+
+30
+00:01:54,530 --> 00:01:59,530
+all we have to do is add a double quote right here. That changes the text to the
+30
+
+31
+00:02:00,200 --> 00:02:04,010
+color that we're used to and this fixes this line.
+31
+
+32
+00:02:04,190 --> 00:02:08,930
+So if we run our code now, we should get a different error. And indeed we do.
+32
+
+33
+00:02:10,190 --> 00:02:13,580
+The next one tells us that on line five,
+33
+
+34
+00:02:13,610 --> 00:02:17,720
+so this one right here, there is an indentation error.
+34
+
+35
+00:02:17,780 --> 00:02:22,610
+There's an unexpected indent somewhere around here on line five.
+35
+
+36
+00:02:23,120 --> 00:02:26,360
+So let's take a look at line five and there you go.
+36
+
+37
+00:02:26,420 --> 00:02:31,280
+There's a little bit of extra space between the print and the beginning of the
+37
+
+38
+00:02:31,280 --> 00:02:32,113
+line.
+38
+
+39
+00:02:32,240 --> 00:02:37,240
+So now that we've fixed that one, let's click run. And it will point to
+39
+
+40
+00:02:37,970 --> 00:02:40,910
+another line of code that's broken. And in this case,
+40
+
+41
+00:02:40,910 --> 00:02:43,340
+it says on line seven,
+41
+
+42
+00:02:43,400 --> 00:02:46,190
+which is here where there's actually no code,
+42
+
+43
+00:02:46,520 --> 00:02:51,260
+there's the unexpected EOF while parsing. What does this mean?
+43
+
+44
+00:02:51,650 --> 00:02:53,030
+Well, if you're not sure,
+44
+
+45
+00:02:53,060 --> 00:02:58,060
+then go ahead and paste it into Google and let's take a look at what people say
+45
+
+46
+00:03:01,240 --> 00:03:05,470
+on Stack Overflow. So as this person,
+46
+
+47
+00:03:05,740 --> 00:03:09,970
+very kind, Felix, um, has explained, this index error
+47
+
+48
+00:03:10,090 --> 00:03:11,110
+unexpected EOF
+48
+
+49
+00:03:11,110 --> 00:03:16,030
+while parsing means that the end of your source code was reached before all
+49
+
+50
+00:03:16,030 --> 00:03:20,650
+code blocks were completed. What is a code block? Well,
+50
+
+51
+00:03:20,680 --> 00:03:23,920
+this is a code block because it's a print function,
+51
+
+52
+00:03:24,160 --> 00:03:29,140
+it has a beginning and it has an end. But what does this line not have?
+52
+
+53
+00:03:29,620 --> 00:03:31,690
+Well, it's got two open parentheses,
+53
+
+54
+00:03:32,020 --> 00:03:34,630
+but only one closing parentheses.
+54
+
+55
+00:03:34,960 --> 00:03:39,960
+So the computer thinks that you are going to continue writing something and then
+55
+
+56
+00:03:40,150 --> 00:03:44,380
+close it off at the end, which is not the case. In fact,
+56
+
+57
+00:03:44,410 --> 00:03:49,410
+what has happened is we simply have an extra misplaced open parenthesis.
+57
+
+58
+00:03:51,700 --> 00:03:53,710
+And now if we delete that and hit run,
+58
+
+59
+00:03:54,010 --> 00:03:57,520
+you'll see that we have everything printed.
+59
+
+60
+00:03:57,940 --> 00:04:01,300
+But at this point, notice how on line four
+60
+
+61
+00:04:01,480 --> 00:04:03,310
+which is the line that we haven't fixed yet,
+61
+
+62
+00:04:03,820 --> 00:04:08,820
+it prints string concatenation is done with the 'blank' sign.
+62
+
+63
+00:04:10,090 --> 00:04:12,430
+Whereas in fact, it should say plus sign.
+63
+
+64
+00:04:13,360 --> 00:04:18,360
+And even though we don't see any errors being printed in our console,
+64
+
+65
+00:04:19,270 --> 00:04:23,590
+you'll see that we have an output mismatch because I'm expecting to see this
+65
+
+66
+00:04:23,590 --> 00:04:27,460
+line, the String Concatenation is done with the "+" sign,
+66
+
+67
+00:04:27,910 --> 00:04:28,743
+but here,
+67
+
+68
+00:04:28,990 --> 00:04:33,990
+the output doesn't have that part. It's missing this part.
+68
+
+69
+00:04:35,140 --> 00:04:39,700
+So there's one last thing that you need to debug. And that is of course,
+69
+
+70
+00:04:39,730 --> 00:04:40,630
+on line four.
+70
+
+71
+00:04:41,290 --> 00:04:46,290
+And what's happening here is we have this part being interpreted as a string,
+71
+
+72
+00:04:47,200 --> 00:04:49,540
+this part being interpreted a string,
+72
+
+73
+00:04:49,960 --> 00:04:54,960
+and it thinks that this plus sign is just us concatenating
+73
+
+74
+00:04:55,420 --> 00:04:57,280
+these two parts together,
+74
+
+75
+00:04:57,760 --> 00:05:01,540
+which is why it printed out like this. But in fact,
+75
+
+76
+00:05:01,640 --> 00:05:06,220
+we wanted to print out is this as text down here.
+76
+
+77
+00:05:06,850 --> 00:05:11,850
+So what we have to do is to change this outer apart from double quotes
+77
+
+78
+00:05:12,400 --> 00:05:14,320
+into single quotes.
+78
+
+79
+00:05:14,830 --> 00:05:18,370
+And now you can see when it highlights this part,
+79
+
+80
+00:05:18,460 --> 00:05:21,640
+it's all the same color including the plus sign.
+80
+
+81
+00:05:22,420 --> 00:05:26,110
+Now it sees this as a complete string,
+81
+
+82
+00:05:26,590 --> 00:05:30,850
+and it's not looking at this as if it's code. So now if we run our program,
+82
+
+83
+00:05:30,880 --> 00:05:33,580
+you can see the entire sentence being printed out.
+83
+
+84
+00:05:34,810 --> 00:05:38,650
+So if you've completed the challenge and you've gotten everything right,
+84
+
+85
+00:05:38,740 --> 00:05:41,290
+then you're now done with this exercise.
+85
+
+86
+00:05:41,950 --> 00:05:46,930
+If you got stuck and you want to have a look at the solution, as always it's down
+86
+
+87
+00:05:46,930 --> 00:05:47,763
+here,
+87
+
+88
+00:05:48,040 --> 00:05:53,040
+and it might be useful to have a look at this page to see where you might've
+88
+
+89
+00:05:53,380 --> 00:05:56,620
+missed something or where you might've gotten something wrong.
+89
+
+90
+00:05:57,730 --> 00:06:01,270
+So I hope you enjoyed this code exercise. In the next lesson,
+90
+
+91
+00:06:01,330 --> 00:06:04,060
+we're going to learn about a new type of Python function,
+91
+
+92
+00:06:04,150 --> 00:06:08,560
+which is the input function. So for all of that and more, I'll see you there.
